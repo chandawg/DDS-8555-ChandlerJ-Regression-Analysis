@@ -2,6 +2,19 @@
 
 # Multiple Linear Regression Analysis: From Theoretical Foundations to Applied Regularization in Biological Data
 
+## Methodology
+- OLS Baseline: An Ordinary Least Squares model was established but showed signs of severe multicollinearity (Condition Number: 153) and heteroscedasticity.
+
+- Ridge Regularization: To address these diagnostic issues, a Ridge regression model was implemented based on the theoretical frameworks of Hoerl and Kennard (1970) and Friedman et al. (2010).
+
+## Key Results
+
+- Ridge R-squared: 0.6010.
+
+- RMSE: 2.0245.
+
+- Primary Predictors: Shell weight and Height were identified as the most significant biological indicators of age.
+
 # Executive Summary
 
 This report evaluates multiple linear regression applications ranging
@@ -45,6 +58,16 @@ implementing Ridge regression, the model achieved a balance between bias
 and variance, addressing the non-orthogonal nature of the physical
 measurements. Ultimately, these analyses demonstrate that rigorous
 assumption testing and the application of regularization are essential for building robust models.
+
+# References
+
+Friedman, J., Hastie, T., & Tibshirani, R. (2010). Regularization Paths for Generalized Linear Models via Coordinate Descent. 33(1). https://www.jstatsoft.org/article/view/v033i01/
+
+Hoerl, A. E., & Kennard, R. W. (1970). Ridge Regression: Biased Estimation for Nonorthogonal Problems. Technometrics, 12(1). https://homepages.math.uic.edu/~lreyzin/papers/ridge.pdf
+
+Nash, W., Sellers, T. L., Talbot, S. R., Cawthorn, A. J., & Ford, W. B. (1994). The Population Biology of Abalone (Haliotis Species) in Tasmania. I. Blacklip Abalone (H. rubra) from the North Coast and Islands of Bass Strait. Sea Fisheries Division, Technical Report No, 48. https://www.researchgate.net/profile/Warwick-Nash/publication/287546509_7he_Population_Biology_of_Abalone_Haliotis_species_in_Tasmania_I_Blacklip_Abalone_H_rubra_from_the_North_Coast_and_Islands_of_Bass_Strait/links/5d949460458515202b7bf592/7he-Population-Biology-of-Abalone-Haliotis-species-in-Tasmania-I-Blacklip-Abalone-H-rubra-from-the-North-Coast-and-Islands-of-Bass-Strait.pdf
+
+Reade, W., & Chow, A. (2024). Regression with an Abalone Dataset. https://www.kaggle.com/competitions/playground-series-s4e4/overview
 
 # AI Disclosure and Usage Statement
 
