@@ -83,9 +83,12 @@ DDS-8555-ChandlerJ-Regression-Analysis/
 │   └── test.csv
 ├── notebooks/                        # Integrated analysis & modeling
 │   └── ChandlerJ_DDS-8555-Assignment2.ipynb
+│   └── ChandlerJ_DDS-8555-Assignment3.ipynb
 ├── submissions/                      # Final model CSV files
 │   ├── submission_Kaggle_Chandler_ols.csv
-│   └── submission_Kaggle_Chandler_ridge.csv
+│   ├── submission_Kaggle_Chandler_ridge.csv
+│   ├── 
+│   └── 
 ├── README.md                         # Project overview and documentation
 └── requirements.txt                  # Python dependency manifest
 ```
