@@ -3,11 +3,19 @@
 ## Methodology
 - OLS Baseline: An Ordinary Least Squares model was established but showed signs of severe multicollinearity (Condition Number: 153) and heteroscedasticity.
 - Ridge Regularization: To address these diagnostic issues, a Ridge regression model was implemented based on the theoretical frameworks of Hoerl and Kennard (1970) and Friedman et al. (2010).
+- Elastic Net Regression (Assignment 3): Implemented to combine L1 and L2 regularization, enabling both coefficient shrinkage and feature selection under strong predictor correlation. Hyperparameters (α and l1_ratio) were selected via cross-validation.
+- Principal Components Regression (PCR) (Assignment 3): Applied PCA prior to regression to eliminate multicollinearity through orthogonal transformation. The optimal number of principal components was selected using 5-fold cross-validated RMSE.
 
 ## Key Results
 - Ridge R-squared: 0.6010.
 - RMSE: 2.0245.
 - Primary Predictors: Shell weight and Height were identified as the most significant biological indicators of age.
+- Elastic Net Validation RMSE: 2.0248
+    - Selected an L1-dominant solution (l1_ratio ≈ 1.0), effectively behaving similarly to Lasso.
+    - Strongest predictors included Whole weight.1, Shell weight, Whole weight, and Height.
+- PCR Validation RMSE: 2.0237
+    - Slightly outperformed Elastic Net on validation data.
+    - Demonstrated comparable predictive performance while fully eliminating multicollinearity.
 
 # Multiple Linear Regression Analysis: From Theoretical Foundations to Applied Regularization in Biological Data
 
