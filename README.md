@@ -87,8 +87,8 @@ DDS-8555-ChandlerJ-Regression-Analysis/
 ├── submissions/                      # Final model CSV files
 │   ├── submission_Kaggle_Chandler_ols.csv
 │   ├── submission_Kaggle_Chandler_ridge.csv
-│   ├── 
-│   └── 
+│   ├── kaggle_submission_Chandler_enet.csv 
+│   └── kaggle_submission_Chandler_pcr.csv
 ├── README.md                         # Project overview and documentation
 └── requirements.txt                  # Python dependency manifest
 ```
