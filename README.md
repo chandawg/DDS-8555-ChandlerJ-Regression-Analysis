@@ -5,6 +5,8 @@
 - Ridge Regularization: To address these diagnostic issues, a Ridge regression model was implemented based on the theoretical frameworks of Hoerl and Kennard (1970) and Friedman et al. (2010).
 - Elastic Net Regression (Assignment 3): Implemented to combine L1 and L2 regularization, enabling both coefficient shrinkage and feature selection under strong predictor correlation. Hyperparameters (α and l1_ratio) were selected via cross-validation.
 - Principal Components Regression (PCR) (Assignment 3): Applied PCA prior to regression to eliminate multicollinearity through orthogonal transformation. The optimal number of principal components was selected using 5-fold cross-validated RMSE.
+- Polynomial Expansion with Ridge (Assignment 4): Added second-degree polynomial features to model curvature in growth relationships, combined with Ridge regularization to stabilize estimates under multicollinearity. Evaluated using 5-fold cross-validated RMSE.
+- Histogram-Based Gradient Boosting (Assignment 4): Implemented a tree-based ensemble to capture nonlinear interactions and threshold effects automatically. Performance assessed via 5-fold cross-validated RMSE and residual diagnostics.
 
 ## Key Results
 - Ridge R-squared: 0.6010.
@@ -16,6 +18,7 @@
 - PCR Validation RMSE: 2.0237
     - Slightly outperformed Elastic Net on validation data.
     - Demonstrated comparable predictive performance while fully eliminating multicollinearity.
+- Gradient Boosting Validation RMSE: 1.99 (5-fold CV), outperforming polynomial expansion and indicating improved modeling of nonlinear interaction effects.
 
 # Multiple Linear Regression Analysis: From Theoretical Foundations to Applied Regularization in Biological Data
 
@@ -84,26 +87,37 @@ DDS-8555-ChandlerJ-Regression-Analysis/
 ├── notebooks/                        # Integrated analysis & modeling
 │   └── ChandlerJ_DDS-8555-Assignment2.ipynb
 │   └── ChandlerJ_DDS-8555-Assignment3.ipynb
+│   └── ChandlerJ_DDS-8555-Assignment4.ipynb
 ├── submissions/                      # Final model CSV files
 │   ├── submission_Kaggle_Chandler_ols.csv
 │   ├── submission_Kaggle_Chandler_ridge.csv
 │   ├── kaggle_submission_Chandler_enet.csv 
-│   └── kaggle_submission_Chandler_pcr.csv
+│   ├── kaggle_submission_Chandler_pcr.csv
+│   ├── kaggle_submission_Chandler_model1_poly_ridge.csv 
+│   └── kaggle_submission_Chandler_model2_histgbr.csv
 ├── README.md                         # Project overview and documentation
 └── requirements.txt                  # Python dependency manifest
 ```
 
 # References
 
+Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. The Annals of Statistics, 29(5), 1189–1232. https://doi.org/10.1214/aos/1013203451
+
 Friedman, J., Hastie, T., & Tibshirani, R. (2010). Regularization Paths for Generalized Linear Models via Coordinate Descent. 33(1). https://www.jstatsoft.org/article/view/v033i01/
 
 Gray, V. (2017). Principal Component Analysis: Methods, Applications and Technology. Nova Science Publishers, Incorporated. http://ebookcentral.proquest.com/lib/nu/detail.action?docID=4801141
 
+Hastie, T., Tibshirani, R., & Friedman, J. (2009). Elements of statistical learning: Data mining, inference, and prediction. (2nd ed.). Springer. https://hastie.su.domains/ElemStatLearn/
+
 Hoerl, A. E., & Kennard, R. W. (1970). Ridge Regression: Biased Estimation for Nonorthogonal Problems. Technometrics, 12(1). https://homepages.math.uic.edu/~lreyzin/papers/ridge.pdf
+
+Little, R., & Rubin, D. (2019). Statistical analysis with missing data., 3rd edition. https://learning.oreilly.com/library/view/statistical-analysis-with/9780470526798/ 
 
 Nash, W., Sellers, T. L., Talbot, S. R., Cawthorn, A. J., & Ford, W. B. (1994). The Population Biology of Abalone (Haliotis Species) in Tasmania. I. Blacklip Abalone (H. rubra) from the North Coast and Islands of Bass Strait. Sea Fisheries Division, Technical Report No, 48. https://www.researchgate.net/profile/Warwick-Nash/publication/287546509_7he_Population_Biology_of_Abalone_Haliotis_species_in_Tasmania_I_Blacklip_Abalone_H_rubra_from_the_North_Coast_and_Islands_of_Bass_Strait/links/5d949460458515202b7bf592/7he-Population-Biology-of-Abalone-Haliotis-species-in-Tasmania-I-Blacklip-Abalone-H-rubra-from-the-North-Coast-and-Islands-of-Bass-Strait.pdf
 
 Reade, W., & Chow, A. (2024). Regression with an Abalone Dataset. https://www.kaggle.com/competitions/playground-series-s4e4/overview
+
+Tukey, J. (1977). Exploratory data analysis. ADDISON-WESLEY PUBLISHING COMPANY. https://github.com/nuxion/data_material/blob/main/statistics/tukey__exploratory_data_analysis_1977.pdf
 
 Zou, H., & Hastie, T. (2005). Regularization and Variable Selection Via the Elastic Net. Journal of the Royal Statistical Society Series B: Statistical Methodology, 67(2), 301–320. https://doi.org/10.1111/j.1467-9868.2005.00503.x
 
