@@ -78,6 +78,19 @@ Both dimensionality-control strategies produced nearly identical validation perf
 
 Overall, the results demonstrate that when predictor correlation is high, regularization or dimensionality reduction materially improves model stability without sacrificing predictive accuracy. For applied deployment, Elastic Net offers greater interpretability and feature-level insight, whereas PCR provides a structurally robust alternative when predictor interdependence is extreme. Both approaches substantially outperform naive OLS baselines in terms of variance control and generalization reliability.
 
+# Comparative Analysis of Polynomial Basis Expansion and Gradient Boosting for Abalone Age Prediction
+
+## Executive Summary
+This analysis evaluated nonlinear regression strategies for predicting abalone age, measured by shell rings, using morphometric features derived from biological growth data. Exploratory analysis indicated strong predictor interdependence and visible curvature in the relationship between shell dimensions and age, suggesting that strictly linear modeling may suffer from functional form misspecification. To address this, two nonlinear approaches were implemented and evaluated using 5-fold cross-validated root mean squared error (RMSE) and residual diagnostics: a Polynomial expansion with Ridge regularization and a Histogram-based Gradient Boosting Regressor.
+
+## Key Insights
+
+- Quadratic feature expansion improved flexibility relative to a linear specification but left mild residual structure at higher predicted ages, indicating incomplete capture of interaction effects.
+- Gradient Boosting demonstrated lower cross-validated error and more uniformly distributed residuals, suggesting superior modeling of nonlinear interactions and threshold behavior inherent in biological growth processes.
+- Residual diagnostics confirmed that functional form specification, rather than variance stabilization alone, was the primary driver of predictive improvement, highlighting the importance of flexible model selection in nonlinear biological systems.
+
+Overall, the findings indicate that while parametric nonlinear extensions can address primary curvature, ensemble-based methods more effectively approximate complex interaction-driven growth dynamics. These results underscore the importance of aligning model structure with the underlying biological data-generating process when pursuing predictive accuracy.
+
 # Repository Structure
 ```
 DDS-8555-ChandlerJ-Regression-Analysis/
